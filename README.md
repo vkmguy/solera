@@ -6,6 +6,7 @@
 - Register Repository - responsible for implementing JPA CRUD operations with DB
 - Register Service - responsible for retrieving data from Repository
 - Resigter Controller - Responsible for providing API endpoints for Register service
+- Resigter Controller Test- Responsible for testing API endpoints
 
 ## Implementation limitations
 Due to time limitations the provided implementation is not perfect, the main focus is to 
