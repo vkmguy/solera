@@ -25,23 +25,26 @@ In command line execute:
 -- java -jar registers-0.0.1-SNAPSHOT.jar
 
 ### The following REST endpoints are exposed:
+    
+    ```
     - Recharge Register:
-    ```
      GET /registers/recharge/<REGISTER_NAME>?amount=<AMOUNT>
-    ```
     * Returns Updated Register Body
+    ```
+    
+    ```
     - Transfer Between Registers:
-    ```
-    GET /registers/transfer/<AMOUNT>?source=<SOURCE_REGISTER_NAME>&destination=<DESTINATION_REGISTER_NAME>
-    ```
+     GET /registers/transfer/<AMOUNT>?source=<SOURCE_REGISTER_NAME>&destination=<DESTINATION_REGISTER_NAME>
     * Returns Both Updated Register Body
+     ```
+
+    ```
     - Get Registers:
-    ```
-    GET /registers
-    ```
+     GET /registers
     * Returns All Registers in DB
+    ```
 
 ### Configuration:
-server.port - port number which this service is listening to. Default - 8080
-spring.jpa.datasource.url - Database url for storing Register Data
-spring.jpa.database-platform - The database Dialect to use. Default - org.hibernate.dialect.PostgreSQLDialect
+- server.port - port number which this service is listening to. Default - 8080
+- spring.jpa.datasource.url - Database url for storing Register Data
+- spring.jpa.database-platform - The database Dialect to use. Default - org.hibernate.dialect.PostgreSQLDialect
