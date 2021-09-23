@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.solera.registers.entity.Register;
 import com.solera.registers.repository.RegisterRepository;
 import com.solera.registers.service.RegisterService;
-import org.hamcrest.core.IsNull;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -50,7 +49,7 @@ class RegisterControllerImplTest {
 
         Mockito.when(registerService.rechargeRegister(record.getName(),2500)).thenReturn(record);
 
-        MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.get("/registers/recharge/Wallet?amount=2500")
+        MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.post("/registers/recharge/Wallet?amount=2500")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON);
 
@@ -73,7 +72,7 @@ class RegisterControllerImplTest {
         Mockito.when(registerService.transferBetweenRegisters(walletRegister.getName(), foodRegister.getName(),500)).thenReturn(records);
 
 
-        MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.get("/registers/transfer/500?source=Wallet&destination=Food expenses")
+        MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.post("/registers/transfer/500?source=Wallet&destination=Food expenses")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON);
 

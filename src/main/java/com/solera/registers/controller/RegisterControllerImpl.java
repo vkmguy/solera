@@ -22,13 +22,13 @@ public class RegisterControllerImpl implements RegisterController {
     }
 
     @Override
-    @GetMapping(value = "/recharge/{name}")
+    @PostMapping(value = "/recharge/{name}")
     public ResponseEntity<Register> rechargeRegister(@PathVariable String name, @RequestParam("amount") int amount) {
         return new ResponseEntity<>(registerService.rechargeRegister(name,amount), HttpStatus.OK);
     }
 
     @Override
-    @GetMapping(value = "/transfer/{amount}")
+    @PostMapping(value = "/transfer/{amount}")
     public ResponseEntity<List<Register>> transferBetweenRegisters(@RequestParam("source") String source, @RequestParam("destination") String destination, @PathVariable int amount) {
         return new ResponseEntity<>(registerService.transferBetweenRegisters(source,destination,amount), HttpStatus.OK);
     }
