@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "bd7d94d3-7445-4d49-9480-7d51914c73ae",
+		"name": "Solera_test_cases",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/registers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/registers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/registers/recharge/Wallet?amount=2400",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/registers/recharge/Wallet?amount=2500",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registers",
+						"recharge",
+						"Wallet"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "2500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/registers/transfer/100?source=Wallet&destination=Food expenses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/registers/transfer/1500?source=Wallet&destination=Food expenses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registers",
+						"transfer",
+						"1500"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "Wallet"
+						},
+						{
+							"key": "destination",
+							"value": "Food expenses"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/registers/transfer/100?source=Savings&destination=Insurance policy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/registers/transfer/500?source=Savings&destination=Insurance policy",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registers",
+						"transfer",
+						"500"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "Savings"
+						},
+						{
+							"key": "destination",
+							"value": "Insurance policy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/registers/transfer/1000?source=Wallet&destination=Savings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/registers/transfer/1000?source=Wallet&destination=Savings",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registers",
+						"transfer",
+						"1000"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "Wallet"
+						},
+						{
+							"key": "destination",
+							"value": "Savings"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
