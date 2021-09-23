@@ -14,6 +14,7 @@ In particular the following still can be improved:
 - Add input validaiton
 - Add Proper exceptions handing by REST end-points. For now the we have implemented a simple ControllerAdvice to handle one exception
 - Add Testcases, for testing all scenarios
+- As we have used PostgresSQL database for persisting data, We need to provide the JDBC URL of the running PostgresSQL server.
 
 ## Build instructions
 Maven is used to build the project
