@@ -24,7 +24,7 @@ After Maven installed and project is check out from the repository, execute the 
 
 ### Run instructions:
 In command line execute:
--- java -jar registers-0.0.1-SNAPSHOT.jar
+ java -jar registers-0.0.1-SNAPSHOT.jar
 
 ### The following REST endpoints are exposed:
     
