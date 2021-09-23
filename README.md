@@ -50,3 +50,5 @@ In command line execute:
 - server.port - port number which this service is listening to. Default - 8080
 - spring.jpa.datasource.url - Database url for storing Register Data
 - spring.jpa.database-platform - The database Dialect to use. Default - org.hibernate.dialect.PostgreSQLDialect
+- spring.jpa.datasource.url - The username for the selected DB login. Default - postgres   
+- spring.jpa.datasource.password - Use the Password for selected DB login. Default - admin
