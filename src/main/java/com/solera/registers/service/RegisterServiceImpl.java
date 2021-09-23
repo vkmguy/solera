@@ -42,7 +42,7 @@ public class RegisterServiceImpl implements RegisterService{
             sourceRegister.setBalance(sourceRegister.getBalance() - amount);
             targetRegister.setBalance(targetRegister.getBalance() + amount);
         } else {
-            throw new AmountExceededBalanceException("The deducted amout is more than the balance of source register");
+            throw new AmountExceededBalanceException("The deducted amount can't be more than source register balance");
         }
 
         repository.save(sourceRegister);
