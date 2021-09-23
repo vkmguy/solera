@@ -3,6 +3,7 @@ package com.solera.registers.service;
 import com.fasterxml.jackson.databind.jsonschema.JsonSerializableSchema;
 import com.solera.registers.entity.Register;
 import com.solera.registers.exception.AmountExceededBalanceException;
+import com.solera.registers.exception.RegisterNotFoundException;
 import com.solera.registers.repository.RegisterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,8 +25,12 @@ public class RegisterServiceImpl implements RegisterService{
     public synchronized Register rechargeRegister(String name, int amount) {
 
         Register theRegister = repository.findByName(name);
-        theRegister.setBalance(theRegister.getBalance()+amount);
-        return repository.save(theRegister);
+        if(theRegister != null){
+            theRegister.setBalance(theRegister.getBalance()+amount);
+            return repository.save(theRegister);
+        }else{
+            throw new RegisterNotFoundException("Register with name "+ name +" not found");
+        }
     }
 
     @Override
